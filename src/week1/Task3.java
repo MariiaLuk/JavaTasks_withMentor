@@ -4,6 +4,24 @@ public class Task3 {
 
     public static void main(String[] args) {
 
+        String result = "";
+        for (int i = 1; i <= 30 ; i++) {
+            if(i % 3 == 0 && i % 5 == 0){
+                result += "FINRA";
+                continue;
+            }else if ( i % 3  == 0){
+                result += "FIN";
+                continue;
+            } else if ( i % 5 == 0){
+                result += "RA";
+                continue;
+            }
+            result += "" + i;
+        }
+
+        System.out.println(result);
+
+
     }
 }
 
