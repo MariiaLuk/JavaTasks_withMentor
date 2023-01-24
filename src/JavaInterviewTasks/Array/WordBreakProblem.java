@@ -1,4 +1,4 @@
-package week3;
+package JavaInterviewTasks.Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,12 +6,21 @@ import java.util.Scanner;
 
 public class WordBreakProblem {
     public static void main(String[] args) {
-        String[] dictionary = {"i", "like", "sam", "sung", "samsung", "mobile", "ice", "cream", "icecream", "man", "go", "mango"};
+        String[] dictionary = {"i", "like", "sam", "samsung", "mobile", "ice", "cream", "icecream", "man", "go", "mango"};
 
         System.out.println("Please enter your word");
         String input = new Scanner(System.in).next();
 
+        for (String each : dictionary) {
+            if(input.contains(each)){
+                input = input.replaceFirst(each,"");
+            }
+        }
+        System.out.println(input.isEmpty());
+
         /*String result = "no";
+
+        input = "likesamsung"
         for (int i = 1; i <= input.length(); i++) {
             if (dictionary.contains(input.substring(0, i)) &&
                     dictionary.contains(input.substring(i))) {
@@ -27,7 +36,7 @@ public class WordBreakProblem {
         String temp = "";
 
         for (int i = 0; i < dictionary.length; i++) {
-            if(input.contains(dictionary[i])){
+                if(input.contains(dictionary[i])){
                 temp += dictionary[i];
                 if(input.equals(temp)){
                     break;

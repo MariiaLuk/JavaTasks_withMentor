@@ -1,4 +1,4 @@
-package week3;
+package JavaInterviewTasks.Array;
 
 import java.util.HashMap;
 import java.util.Map;
