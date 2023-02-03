@@ -3,18 +3,26 @@ package week3;
 public class Task2_ReverseNegativeNumber {
     public static void main(String[] args) {
 
-        System.out.println(reverseNegative(-50));
+        System.out.println(reverseNegative(-58946));
         System.out.println(reverseNegative(-3));
-        System.out.println(reverseNegative(-30));
-        System.out.println(reverseNegative(80));
+        System.out.println(reverseNegative(-1234));
+        System.out.println(reverseNegative(87));
 
     }
 
     public static int reverseNegative(int num){
-        if(num > 0 ){
-            throw new ArithmeticException("Given number is not a negative number");
+        int reversed = 0;
+        if(num>0){
+            throw new ArithmeticException("Provided number is not a negative number");
+        }else {
+            num = - num;
         }
-        return num*(-1);
+        while (num != 0 ){
+            int remainder = num % 10;
+            reversed = reversed * 10 + remainder;
+            num /=10;
+        }
+        return reversed;
     }
 }
 
