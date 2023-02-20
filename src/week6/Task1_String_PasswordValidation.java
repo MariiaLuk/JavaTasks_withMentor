@@ -12,7 +12,7 @@ public class Task1_String_PasswordValidation {
         5. Password should at least contain a digit
      */
     public static void main(String[] args) {
-        System.out.println(isValid("iH5#"));
+        System.out.println(isValid("iH5hszhz hszh"));
     }
 
     public static boolean isValid(String password){
