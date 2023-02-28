@@ -1,7 +1,52 @@
 package week8;
 
+import java.util.Arrays;
+
 public class Task1_Array_N_Unique_Integers {
 
+    public static void main(String[] args) {
+        int[] result = giveArray(3);
+        System.out.println(Arrays.toString(result));
+
+        System.out.println(Arrays.toString(solution(4)));
+    }
+
+
+    public static int[] giveArray(int length)  {
+        if(length<1 || length>100){
+            System.out.println("Provided number is out of range");
+        }
+        int[] array = new int[length];
+        if(length %2 == 0){
+            for (int i = 0 , j = 1 ; i < array.length; i+=2 ,j++) {
+                array[i]= j;
+                array[i+1] = -j;
+            }
+        }else {
+            array[0] = 0;
+            for (int i = 1 , j = 1 ; i < array.length; i+=2 ,j++) {
+                array[i]= j;
+                array[i+1] = -j;
+            }
+        }
+        return array;
+    }
+
+    //CYDEO RESOLUTION
+    public static int[] solution(int N) {
+
+        int[] result = new int[N];
+        int sum = 0;
+
+        for (int i = 0; i < N - 1; i++) {
+            result[i] = i;
+            sum += i;
+        }
+
+        result[N - 1] = -sum;
+
+        return result;
+    }
     /*
     Array - N unique integers that sum up to 0
 Write a function that given an integer N (1 < N < 100), returns an array
