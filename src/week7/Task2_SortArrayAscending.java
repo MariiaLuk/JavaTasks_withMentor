@@ -11,7 +11,6 @@ public class Task2_SortArrayAscending {
      */
 
     public static void main(String[] args) {
-
         int[] arr = {10, 9, 8, 7};
         System.out.println(Arrays.toString(sortArray(arr)));
     }
@@ -27,10 +26,6 @@ public class Task2_SortArrayAscending {
                 }
             }
         }
-
         return array;
     }
-
-
-
 }
