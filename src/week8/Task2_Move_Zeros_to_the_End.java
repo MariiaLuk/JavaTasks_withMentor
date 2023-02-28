@@ -10,6 +10,7 @@ public class Task2_Move_Zeros_to_the_End {
         int[] arr = {1,0,2,0,3,0,4,0};
         System.out.println(Arrays.toString(moveZeros_FirstSolution(arr)));
         System.out.println(Arrays.toString(moveZeros_SecondSolution(arr)));
+        System.out.println(Arrays.toString(moveZeros_ThirdSolution(arr)));
     }
     
     public static int[] moveZeros_FirstSolution(int[] array){
@@ -44,6 +45,21 @@ public class Task2_Move_Zeros_to_the_End {
             array[i] = list.get(i);
         }
         return array;
+    }
+
+    public static int[] moveZeros_ThirdSolution(int[] array) {
+
+        int[] result = new int[array.length];
+        int count = 0;
+
+        for (int each : array) {
+            if (each != 0) {
+                result[count++] = each;
+            }
+        }
+
+        return result;
+
     }
 
     /*
