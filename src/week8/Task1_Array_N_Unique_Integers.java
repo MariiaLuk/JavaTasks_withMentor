@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class Task1_Array_N_Unique_Integers {
 
     public static void main(String[] args) {
-        int[] result = giveArray(3);
+        int[] result = giveArray(6);
         System.out.println(Arrays.toString(result));
 
-        System.out.println(Arrays.toString(solution(4)));
+        System.out.println(Arrays.toString(solution(8)));
     }
 
 
@@ -20,7 +20,9 @@ public class Task1_Array_N_Unique_Integers {
         if(length %2 == 0){
             for (int i = 0 , j = 1 ; i < array.length; i+=2 ,j++) {
                 array[i]= j;
+                //array[0] = 1
                 array[i+1] = -j;
+                //arra[1]=-1
             }
         }else {
             array[0] = 0;
